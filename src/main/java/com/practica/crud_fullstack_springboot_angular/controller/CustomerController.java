@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+//http://localhost:8080/api/customers
+@RequestMapping("/api/customers")
 public class CustomerController {
 
     private final CustomerService customerService;
@@ -15,8 +17,8 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-    //localhost:8080/create
-    @PostMapping("/create")
+    //localhost:8080/api/customers
+    @PostMapping
     public Customer save(@RequestBody Customer customer){
         return customerService.save(customer);
     }
