@@ -3,6 +3,7 @@ import { appConfig } from './app/app.config';
 import { App } from './app/app';
 import { Ejemplo } from './app/ejemplo/ejemplo';
 import {CustomerList} from './app/components/customer-list/customer-list';
+import {CustomerAdd} from './app/components/customer-add/customer-add';
 
-bootstrapApplication(App, appConfig)
+bootstrapApplication(CustomerAdd, appConfig)
   .catch((err) => console.error(err));
