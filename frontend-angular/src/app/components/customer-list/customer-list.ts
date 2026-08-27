@@ -1,4 +1,4 @@
-import {Component, numberAttribute, OnInit, signal} from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Customer } from '../../customer';
 import { CustomerService } from '../../service/customer.service';
@@ -13,8 +13,7 @@ export class CustomerList implements OnInit {
 
   customers = signal<Customer[]>([]);
 
-  constructor(private customerService: CustomerService) {
-  }
+  constructor(private customerService: CustomerService) {}
 
   ngOnInit(): void {
     this.listCustomers();
@@ -29,7 +28,12 @@ export class CustomerList implements OnInit {
     );
   }
 
-  deleteCustomer(id: number) {
+  deleteCustomer(id: number | null | undefined) {
+    if (id === null || id === undefined) {
+      console.warn('Operación cancelada: El ID proporcionado es nulo o indefinido.');
+      return;
+    }
+
     console.log('Intentando eliminar:', id);
 
     this.customerService.deleteCustomerById(id).subscribe({
