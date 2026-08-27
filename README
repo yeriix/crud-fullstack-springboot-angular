@@ -24,6 +24,14 @@ Sistema integral de gestión de clientes desarrollado con una arquitectura desac
 * **Defensa de Tipos:** Manejo estricto de referencias nulas o indefinidas en el ciclo de vida de los componentes para evitar llamadas inválidas a la API.
 * **Arquitectura Orientada a Servicios:** Lógica de negocio HTTP encapsulada en servicios inyectables (`CustomerService`).
 
+## Capturas de Pantalla
+
+### Listado de Clientes
+![Listado de clientes](listado.png)
+
+### Alta de Cliente
+![Crear cliente](crear%20customer.png)
+
 ## Requisitos Previos
 
 * [JDK 17](https://jdk.java.net/17/) o superior.
