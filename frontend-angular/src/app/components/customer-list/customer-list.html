@@ -1,0 +1,6 @@
+<h2>Listado de Customers</h2>
+<ul>
+  @for (customer of customers(); track customer.id) {
+    <li>{{ customer.id }} - {{ customer.firstName }} - {{ customer.lastName }} - {{ customer.email }}</li>
+  }
+</ul>
