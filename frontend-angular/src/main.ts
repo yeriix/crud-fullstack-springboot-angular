@@ -5,5 +5,5 @@ import { Ejemplo } from './app/ejemplo/ejemplo';
 import {CustomerList} from './app/components/customer-list/customer-list';
 import {CustomerAdd} from './app/components/customer-add/customer-add';
 
-bootstrapApplication(CustomerAdd, appConfig)
+bootstrapApplication(App, appConfig)
   .catch((err) => console.error(err));

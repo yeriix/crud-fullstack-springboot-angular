@@ -1,9 +1,10 @@
-import {Component, OnInit, signal} from '@angular/core';
-import {Customer} from '../../customer';
-import {CustomerService} from '../../service/customer.service';
+import { Component, OnInit, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { Customer } from '../../customer';
+import { CustomerService } from '../../service/customer.service';
 
 @Component({
-  imports: [],
+  imports: [RouterLink],
   selector: 'app-customer-list',
   styleUrl: './customer-list.css',
   templateUrl: './customer-list.html',
